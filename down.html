@@ -66,16 +66,29 @@
       </div>      
   </div>
   <script type="text/javascript">
-     var is_weixin = (function() {
-           var ua = navigator.userAgent.toLowerCase();
-           if (ua.match(/MicroMessenger/i) == "micromessenger") {
-                 location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk";
-                 return true;
-           } else if (ua.match(/QQ/i) == "qq") {
-                 location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk";
-                 return true;
-           }
-        })();
+    // var is_weixin = (function() {
+     //      var ua = navigator.userAgent.toLowerCase();
+    ///       if (ua.match(/MicroMessenger/i) == "micromessenger") {
+     //            location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk";
+     ////           return true;
+     //      } else if (ua.match(/QQ/i) == "qq") {
+     //            location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk";
+     //            return true;
+     //      }
+      //  })();
+        function is_weixin() {
+
+            var ua = navigator.userAgent.toLowerCase();
+
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var is_weixin = is_weixin();
+        
         window.onload = function () {
             var tip = document.getElementById('weixin-tip-box');
             if (is_weixin) {

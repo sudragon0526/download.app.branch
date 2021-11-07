@@ -74,7 +74,8 @@
            </p>    
       </div>      
   </div>
-  <a id="btn" style="margin-top: 40px;" >12</a>     
+
+  <div id="button" align="center"> </div>
   <script type="text/javascript">
     // var is_weixin = (function() {
      //      var ua = navigator.userAgent.toLowerCase();
@@ -86,7 +87,22 @@
      //            return true;
      //      }
       //  })();
-        
+      var input=document.createElement("input");
+
+      input.type="button";
+
+      input.value="返回大厅报名";
+
+      input.onclick=aa;
+
+      document.getElementById("button").appendChild(input); 
+
+      function aa()
+      {
+
+      alert('ss');//你要执行的代码
+
+      }        
         function is_weixin() {
 
             var ua = navigator.userAgent.toLowerCase();

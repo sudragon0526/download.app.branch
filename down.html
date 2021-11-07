@@ -22,14 +22,14 @@
           top: 4px;
           align-items: center;
     }
-   <!-- .weixin-tip {
+   .weixin-tip {
           background: #40b2a8;
           z-index: 100;
           padding: 8px;
           border-radius: 8px;
           margin-right: 8px
-    } -->
-    .weixin-tip {
+    }
+   <!-- .weixin-tip {
           display: none;
           position: fixed;
           left: 0;
@@ -40,7 +40,7 @@
           height: 100%;
           width: 100%;
           z-index: 100;
-    }
+    } -->
     .weixin-tip p {
           text-align: center;
           font-size: 14px;
@@ -77,15 +77,16 @@
             <span></span>
         </div>
       <div class="weixin-tip">
-            <img src="raw/main/bk.jpg" class="img1">
-           <!-- <p>
-           //     请点击右上角
-           // </p>
-           // <p class="content">
-            //    选择"浏览器中打开"
-            //</p>  -->    
+           <!-- <img src="raw/main/bk.jpg" class="img1"> -->
+           <p>
+                请点击右上角
+           </p>
+           <p class="content">
+                选择"浏览器中打开"
+           </p>    
       </div>      
   </div>
+  <input  id="button" type="button" value="点击" >    
   <script type="text/javascript">
     // var is_weixin = (function() {
      //      var ua = navigator.userAgent.toLowerCase();
@@ -97,6 +98,7 @@
      //            return true;
      //      }
       //  })();
+        
         function is_weixin() {
 
             var ua = navigator.userAgent.toLowerCase();
@@ -112,6 +114,7 @@
         
         window.onload = function () {
             var tip = document.getElementById('weixin-tip-box');
+              
             if (is_weixin) {
                tip.style.display = 'block';
                //  location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk";
@@ -120,6 +123,9 @@
                  // <div class="test">
                  //       <a href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk">点击下载apk</a>
                  // </div>
+                  document.write("APK下载界面!");
+                  var btn = document.getElementById("button");  
+                  btn.addEventListener('click',function() {alert('你点击了按钮哦！')},false);                  
                  location.href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk"; 
             }
         }

@@ -75,7 +75,7 @@
       </div>      
   </div>
 
-  <div id="button" align="center"> </div>
+  //<div id="button" align="center"> </div>
   <script type="text/javascript">
     // var is_weixin = (function() {
      //      var ua = navigator.userAgent.toLowerCase();
@@ -128,15 +128,7 @@
                  //       <a href="https://github.com/sudragon0526/download.app.branch/raw/main/app-arm7-release.apk">点击下载apk</a>
                  // </div>
                   document.write("APK下载");
-    var input=document.createElement("input");
-
-      input.type="button";
-
-      input.value="返回大厅报名";
-
-      input.onclick=aa;
-
-      document.getElementById("button").appendChild(input); 
+                 document.write("<input type='button' align="center" value='点击下载' onclick=' aa();'>"); 
                   
                   //var btn = document.getElementById("button");  
                   //var btn = new Btn(); 
